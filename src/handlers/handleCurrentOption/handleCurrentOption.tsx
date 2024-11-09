@@ -6,7 +6,7 @@ interface CurrentOptionHandler {
   setSearchParams: (currentOptions: URLSearchParams) => void;
 }
 
-export default function handleOptionChange(params: CurrentOptionHandler): void {
+export default function handleCurrentOption(params: CurrentOptionHandler): void {
   const { event, setPerPage, setCurrentPage, newParams, setSearchParams } =
     params;
   const startPage = import.meta.env.VITE_START_PAGE;

@@ -1,3 +1,5 @@
+import { strict } from "assert";
+
 interface CurrentPageHandler {
   event: React.MouseEvent<HTMLAnchorElement>;
   currentPage: number;
@@ -16,7 +18,7 @@ export default function handleCurrentPage(params: CurrentPageHandler): void {
     newParams,
     setSearchParams,
   } = params;
-  const value = (event.target as HTMLAnchorElement).text;
+  const value: string = (event.target as HTMLAnchorElement).text;
 
   if (value === '«' && currentPage > 1) {
     setCurrentPage(currentPage - 1);

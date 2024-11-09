@@ -42,7 +42,6 @@ const Pagination: React.FC<PaginationProps> = props => {
           <a
             data-cy="prevLink"
             className="page-link"
-            href="#prev"
             aria-disabled={currentPage === 1 && 'true'}
             key={'«'}
             onClick={onPageChange}
@@ -62,7 +61,6 @@ const Pagination: React.FC<PaginationProps> = props => {
           <a
             data-cy="nextLink"
             className="page-link"
-            href="#next"
             aria-disabled={currentPage === pageItemsCount && 'true'}
             key={'»'}
             onClick={onPageChange}
